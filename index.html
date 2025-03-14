@@ -6,6 +6,7 @@
     <title>Etch-a-Sketch</title>
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
 </head>
 <body>
     <header>
@@ -17,8 +18,25 @@
         <div id="pageHeading">
             <h1> Ready to Draw?!</h1>
         </div>
-        <div id="gameContainer"></div>
-        <div id="gridContainer"></div>
+        <div id="gameContainer">
+            <div class="gridContainer"></div>
+            <div class="userInputContainer">
+                <div class="buttons">
+                    <button id="black">Black</button>
+                    <button id="rgb">RGB</button>
+                    <button id="resetButton">Reset</button>
+                </div>
+                <div class = "sizeSelector">
+                    <input 
+                    type="text"
+                    id="userInput"
+                    placeholder="Choose your board Resolution"
+                    value="16"
+                    onchange="changeSize(this.value)"/>
+                    <button id="sizeSelectorButton">Set Size</button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="leftSide">
